@@ -36,27 +36,26 @@ public class Chemotaxis extends PApplet {
  	rect(0,0,250,500);
  	fill(0);
  	ellipse(100,100,35,35);
- 	/*beginShape();
- 	vertex(50,50);
- 	vertex(60,60);
- 	vertex(70,70);
- 	endShape();*/
+ 	
  	fill(255,0,0);
  	noStroke();
  	ellipse(115,98,15,16);
  	ellipse(100,119,18,10);
  	triangle(85,80,97,90,110,80);
-
-
- 	fill(255);
- 	textSize(40);
- 	text("VS.",225,250);
+ 	fill(0);
+ 	arc(98,77,12,13,-.8f,2);
+ 	arc(102,79,12,13,2,5);
+ 	stroke(0);
+ 	
  	germ.move();
  	germ.show();
  	bac.move();
  	bac.show();
  	ew.move();
  	ew.show();
+ 	fill(255);
+ 	textSize(40);
+ 	text("VS.",225,250);
  	textSize(20);
  	text("Score: " + count,70,30);
  	text("Score: " + count1,330,30);
@@ -67,7 +66,7 @@ public class Chemotaxis extends PApplet {
 	 }
 	 if (count1 > 5000)
 	 {
-	 	text("Window Wins!", 200,300);
+	 	text("Windows Wins!", 200,300);
 	 }
  	//move and show the bacteria   
  }  
@@ -78,7 +77,7 @@ public class Chemotaxis extends PApplet {
  	{
 	 	myX = x;
 	 	myY = y;
-	 	col = color((int)Math.random()*250,(int)Math.random()*250,(int)Math.random()*250);
+	 	col = color((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
 	}
  	public void show()
 	 {
@@ -99,15 +98,9 @@ public class Chemotaxis extends PApplet {
 		myX = myX + (int)(Math.random()*5-2.5f);
 		myY = myY + (int)(Math.random()*5-2.5f);
 
-	 }
- 	
-
- 	//lots of java!   
+	 }   
  }    
- public void mousePressed()
- 	{
- 		
- 	}
+ 
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "Chemotaxis" };
     if (passedArgs != null) {
