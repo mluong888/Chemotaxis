@@ -63,14 +63,12 @@
  	 if (count >5000)
 	 {
 	 	text("Apple Wins!", 200,300);
-	 	count =0;
-	 	count1 = 0;
+	 	
 	 }
 	 if (count1 > 5000)
 	 {
 	 	text("Android Wins!", 200,300);
-	 	count =0;
-	 	count1 = 0;
+	 	
 	 }
  	//move and show the bacteria   
  }  
